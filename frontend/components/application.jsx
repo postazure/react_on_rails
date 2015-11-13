@@ -1,7 +1,7 @@
 // Entry Point For App
-// testing
+export default class App {
+  foo() {
+    return false;
+  }
+}
 
-let foo = 10;
-let bar = 8;
-let baz = foo + bar;
-baz.toString();
