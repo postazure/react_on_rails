@@ -6,9 +6,8 @@ var clean = require('gulp-clean');
 var jasmine = require('gulp-jasmine');
 var console = require('better-console');
 
-var assetsPath  = 'frontend/components/**/*.jsx';
-var destPath = './frontend/dist';
-var specsPath = './frontend/specs/**/*_spec.js';
+var assetsPath  = 'react_views/**/*.jsx';
+var specsPath = './spec/components/**/*_spec.js';
 var webpackConfig = require('./webpack.config.js');
 var jasmineConfig = require('./jasmine.config.js');
 
@@ -30,21 +29,15 @@ gulp.task('production', function () {
 
 //-----------------------------------
 
-gulp.task('clean-build', function (cb) {
-  gulp.src(destPath + '/*')
-    .pipe(clean());
-  cb();
-});
-
 gulp.task('jasmine', function () {
   console.clear();
   gulp.src(specsPath)
-    .pipe(jasmine(jasmineConfig))
+    .pipe(jasmine({fullStackTrace: true}))
 });
 
-gulp.task("webpack", ['clean-build'], function(callback) {
+gulp.task("webpack", function(callback) {
   webpack(
-    webpackConfig, function(err, stats) {
+    webpackConfig, function(err, info) {
       if(err) {throw new gutil.PluginError("webpack", err)}
       callback();
     }

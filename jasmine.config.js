@@ -1,6 +1,6 @@
 module.exports = {
-  spec_dir: 'frontend/spec',
+  spec_dir: 'spec/components',
   helpers: [
-    'frontend/support/**/*.js'
+    'spec/**/spec_helper.js'
   ]
 };

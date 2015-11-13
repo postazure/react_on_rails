@@ -1,7 +1,7 @@
 var path = require('path');
-var buildPath = path.resolve(__dirname, "frontend/dist");
+var buildPath = path.resolve(__dirname, "app/assets/javascripts/react_views");
 module.exports = {
-  entry: './frontend/components/application.jsx',
+  entry: './components/application.jsx',
   devtool: 'source-map',
   output: {
     path: buildPath,
