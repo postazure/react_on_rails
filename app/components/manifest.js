@@ -1,7 +1,6 @@
 //Add New Components' file names.
 var components = [
-  'hello_world',
-  'hello_world_other'
+  'hello_world'
 ];
 
 var path = require('path');
@@ -12,7 +11,6 @@ function validatePaths(components) {
   var validComponentPaths = [];
   for(var i=0; i < components.length; i++){
     var component = pathFromRoot + '/'+ components[i] + '.jsx';
-    require(component);
     validComponentPaths.push(component);
   }
   return validComponentPaths;
