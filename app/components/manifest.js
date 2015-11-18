@@ -1,4 +1,4 @@
-//Add New Components to this Array
+//Add New Components' file names.
 var components = [
   'hello_world',
   'hello_world_other'
