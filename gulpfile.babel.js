@@ -1,12 +1,10 @@
 var gulp = require('gulp');
 var gutil = require("gulp-util");
-var uglify = require('gulp-uglify');
 var webpack = require('webpack');
-var clean = require('gulp-clean');
 var jasmine = require('gulp-jasmine');
 var console = require('better-console');
 
-var assetsPath  = 'react_views/**/*.jsx';
+var assetsPath  = './app/components/**/*.jsx';
 var specsPath = './spec/components/**/*_spec.js';
 var webpackConfig = require('./webpack.config.js');
 var jasmineConfig = require('./jasmine.config.js');

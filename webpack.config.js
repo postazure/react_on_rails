@@ -1,7 +1,10 @@
 var path = require('path');
-var buildPath = path.resolve(__dirname, "app/assets/javascripts/react_views");
+var buildPath = path.resolve(__dirname, "app/assets/javascripts/components");
+var manifestPath = path.resolve(__dirname, "app/components");
+var manifest = require(manifestPath + '/manifest.js');
+
 module.exports = {
-  entry: './components/application.jsx',
+  entry: manifest,
   devtool: 'source-map',
   output: {
     path: buildPath,
