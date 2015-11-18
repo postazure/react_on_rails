@@ -29,6 +29,7 @@
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
     "better-console": "^0.2.4",
+    "file-exists": "^0.1.1",
     "gulp": "^3.9.0",
     "gulp-jasmine": "^2.2.1",
     "gulp-webpack": "^1.5.0",

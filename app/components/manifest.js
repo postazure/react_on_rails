@@ -4,6 +4,7 @@ var components = [
 ];
 
 var path = require('path');
+var fileExists = require('file-exists');
 var pathFromRoot = path.resolve(__dirname, "./");
 module.exports = validatePaths(components);
 
@@ -11,7 +12,16 @@ function validatePaths(components) {
   var validComponentPaths = [];
   for(var i=0; i < components.length; i++){
     var component = pathFromRoot + '/'+ components[i] + '.jsx';
-    validComponentPaths.push(component);
+    if (checkPath(components[i], component)) {
+      validComponentPaths.push(component);
+    }
   }
   return validComponentPaths;
+}
+
+function checkPath(name, path) {
+  if (!fileExists(path)) {var error = 'Component "'+ name + '" was not found at ' + path + ".\n";
+    throw error;
+  }
+  return true;
 }
