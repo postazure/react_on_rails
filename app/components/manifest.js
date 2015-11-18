@@ -1,6 +1,7 @@
 //Add New Components to this Array
 var components = [
-  'hello_world.jsx'
+  'hello_world',
+  'hello_world_other'
 ];
 
 var path = require('path');
@@ -10,7 +11,7 @@ module.exports = validatePaths(components);
 function validatePaths(components) {
   var validComponentPaths = [];
   for(var i=0; i < components.length; i++){
-    var component = pathFromRoot + '/'+ components[i];
+    var component = pathFromRoot + '/'+ components[i] + '.jsx';
     require(component);
     validComponentPaths.push(component);
   }
