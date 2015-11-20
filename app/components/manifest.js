@@ -9,7 +9,8 @@ var pathFromRoot = path.resolve(__dirname, "./");
 module.exports = validatePaths(components);
 
 function validatePaths(components) {
-  var validComponentPaths = {};
+  var application_loaders = pathFromRoot + '/application.jsx';
+  var validComponentPaths = {application: application_loaders};
   for(var i=0; i < components.length; i++){
     var componentPath = pathFromRoot + '/'+ components[i] + '/' + components[i] + '.jsx';
     if (checkPath(components[i], componentPath)) {

@@ -18,7 +18,10 @@ module.exports = {
         loader: "babel-loader"
       }
     ]
-  }
+  },
+  extensions: [
+    '.jsx'
+  ]
 };
 
 

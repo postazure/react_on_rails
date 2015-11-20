@@ -8,6 +8,6 @@ export default class HelloWorld extends React.Component{
   }
 }
 
-window.loadComponent = function (render_info) {
+window.hello_world = function (render_info) {
   ReactDOM.render(<HelloWorld text={render_info.props.text} />, render_info.node)
 };
