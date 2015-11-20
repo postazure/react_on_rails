@@ -36,6 +36,7 @@
     "webpack": "^1.12.4"
   },
   "dependencies": {
-    "react": "^0.14.2"
+    "react": "^0.14.2",
+    "react-dom": "^0.14.3"
   }
 }

@@ -18,8 +18,13 @@ gulp.task('default',
 gulp.task('test', ['jasmine']);
 
 gulp.task('development', function () {
+  gulp.watch([assetsPath], ['webpack'])
+});
+
+gulp.task('development:test', function () {
   gulp.watch([assetsPath, specsPath], ['webpack', 'jasmine'])
 });
+
 
 gulp.task('production', function () {
   // Transpile and Minify

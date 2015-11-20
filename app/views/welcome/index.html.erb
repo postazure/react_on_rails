@@ -1,0 +1,5 @@
+<%= javascript_include_tag 'components/hello_world' %>
+<div class="react-hello-world"/>
+<script>
+  window.loadComponent({props: {text: "<%= @text %>"}, node: document.getElementsByClassName('react-hello-world')[0]})
+</script>
