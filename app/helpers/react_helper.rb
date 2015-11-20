@@ -1,6 +1,6 @@
 module ReactHelper
   def render_component(component, props = {}, options = {tag_name: 'span'})
-    javascript_include_tag "components/hello_world"
+    javascript_include_tag "components/#{component}"
     node = "document.getElementById('react-#{component}')"
 
     "
