@@ -9,11 +9,11 @@ var pathFromRoot = path.resolve(__dirname, "./");
 module.exports = validatePaths(components);
 
 function validatePaths(components) {
-  var validComponentPaths = [];
+  var validComponentPaths = {};
   for(var i=0; i < components.length; i++){
-    var component = pathFromRoot + '/'+ components[i] + '.jsx';
-    if (checkPath(components[i], component)) {
-      validComponentPaths.push(component);
+    var componentPath = pathFromRoot + '/'+ components[i] + '/' + components[i] + '.jsx';
+    if (checkPath(components[i], componentPath)) {
+      validComponentPaths[components[i]] = componentPath;
     }
   }
   return validComponentPaths;
