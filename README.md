@@ -11,7 +11,8 @@ This template is set up to allow thorough testing of your react code and rails c
  - Components live inside a directory of their name `components/hello_world/hello_world.jsx`
  - The component also needs to be included in the manifest list `components/manifest.js`
 
-Important: Components are responsible for their own render code. ie. 
+Important: Components are responsible for their own render code.
+
 ```javascript
 // /app/components/hello_world/hello_world.jsx
 
@@ -26,6 +27,7 @@ window.hello_world = function (render_info) {
 ><b>props</b> - Hash, Same structure as expected by react component
 ><b>options</b> - 
 >>  <b>tag_name</b> - String, DOM element that wraps component
+
 ```ruby
 # /app/helpers/react_helper.rb
 
